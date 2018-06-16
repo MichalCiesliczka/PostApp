@@ -2,18 +2,23 @@ const accessTokenStorageType = sessionStorage;
 const accessTokenStorageKey = 'accessToken';
 
 export const accessTokenHandler = {
+  storageType: accessTokenStorageType,
+  set storage(storageType) {
+    this.storageType = storageType;
+  },
+  get storage() {
+    return this.storageType;
+  },
   save(token) {
-    accessTokenStorageType.setItem(accessTokenStorageKey, token);
+    this.storageType.setItem(accessTokenStorageKey, token);
   },
   get() {
-    return accessTokenStorageType.getItem(accessTokenStorageKey);
+    return this.storageType.getItem(accessTokenStorageKey);
   },
   remove() {
-    accessTokenStorageType.removeItem(accessTokenStorageKey);
+    this.storageType.removeItem(accessTokenStorageKey);
   },
-  getTokenFromFirebase(userObject) {
-    const { credential: { accessToken } } = userObject;
-
+  getTokenFromFirebase({ credential: { accessToken } }) {
     return accessToken;
   }
 };
