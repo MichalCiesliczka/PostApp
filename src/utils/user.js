@@ -6,17 +6,17 @@ export const accessTokenHandler = {
     accessTokenStorageType.setItem(accessTokenStorageKey, token);
   },
   get() {
-    return accessTokenStorageType.getItem(accessTokenStorageKey)
+    return accessTokenStorageType.getItem(accessTokenStorageKey);
   },
   remove() {
-    accessTokenStorageType.removeItem(accessTokenStorageKey)
+    accessTokenStorageType.removeItem(accessTokenStorageKey);
   },
   getTokenFromFirebase(userObject) {
     const { credential: { accessToken } } = userObject;
 
     return accessToken;
   }
-}
+};
 
 export default {
   accessTokenHandler,
