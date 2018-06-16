@@ -1,9 +1,9 @@
-import { createAction } from 'redux-actions'
+import { createAction } from 'redux-actions';
 
-export const markAppAsLoaded = createAction('APP_LOADED', () => {})
+export const markAppAsLoaded = createAction('APP_LOADED', () => {});
 
 const appActions = {
   markAppAsLoaded
-}
+};
 
-export default appActions
+export default appActions;

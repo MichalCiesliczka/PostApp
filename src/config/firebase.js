@@ -5,4 +5,4 @@ export default {
   projectId: 'postapp-87a73',
   storageBucket: 'postapp-87a73.appspot.com',
   messagingSenderId: '1070695528382'
-}
+};
