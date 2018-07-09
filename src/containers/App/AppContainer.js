@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
-import Home from '../Home/HomeContainer';
+import Routes from '../../routes';
 
 const App = () => (
   <div>
@@ -9,9 +9,7 @@ const App = () => (
       <Link to="/">Home</Link>
     </header>
 
-    <main>
-      <Route exact path="/" component={Home} />
-    </main>
+    <Route component={Routes} />
   </div>
 );
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import DashboardOverview from '../Overview/DashboardOverview';
+import DashboardOverview from './Dashboard';
 import { isUserLoggedIn } from '../../reducers/selectors/userSelectors';
 
 const DashboardRouting = ({ isLoggedIn }) => (

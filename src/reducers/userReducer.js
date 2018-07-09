@@ -1,13 +1,11 @@
 import { handleActions } from 'redux-actions';
 
+import {
+  IS_LOGGED_IN_KEY,
+  USER_DATA_KEY,
+} from './selectors/userSelectors'
 import { logInUser, logOutUser } from '../actions/user';
 import { accessTokenHandler } from '../utils/user';
-
-// Reducer constants
-export const IS_LOGGED_IN_KEY = 'isLoggedIn';
-export const USER_DATA_KEY = 'userData';
-
-export const USER_REDUCER_KEY = 'user';
 
 const initialState = {
   [IS_LOGGED_IN_KEY]: !!accessTokenHandler.get(),

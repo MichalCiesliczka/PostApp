@@ -7,6 +7,10 @@ describe('accessTokenHandler()', () => {
 
   accessTokenHandler.storage = sessionStorage;
 
+  it('should return proper storage name', () => {
+    expect(accessTokenHandler.storage).toBe(sessionStorage);
+  });
+
   it('should save access token to storage', () => {
     accessTokenHandler.save(accessToken);
 
