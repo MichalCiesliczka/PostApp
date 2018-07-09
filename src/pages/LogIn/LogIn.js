@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
@@ -24,7 +24,7 @@ const mapUserObjectFromFirebase = (userObject) => {
     photoURL,
     accessToken: accessTokenHandler.getTokenFromFirebase(userObject),
     userId: uid,
-  }
+  };
 };
 
 class LogIn extends PureComponent {
@@ -41,7 +41,7 @@ class LogIn extends PureComponent {
       this.props.history.push('/error-page', {
         title: 'Login failure',
         message,
-      })
+      });
     });
   }
 
@@ -50,7 +50,7 @@ class LogIn extends PureComponent {
       <button onClick={this.loginCallback}>
         Login!
       </button>
-    )
+    );
   }
 }
 
@@ -59,7 +59,7 @@ LogIn.propTypes = {
   /* eslint-disable react/forbid-prop-types */
   history: PropTypes.object.isRequired,
   /* eslint-enable */
-}
+};
 
 const mapDispatchToProps = {
   logInUser,

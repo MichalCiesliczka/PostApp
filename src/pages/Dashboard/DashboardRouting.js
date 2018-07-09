@@ -24,7 +24,7 @@ const DashboardRouting = ({ isLoggedIn }) => (
 
 DashboardRouting.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
-}
+};
 
 const mapStateToProps = state => ({
   isLoggedIn: isUserLoggedIn(state),
